@@ -76,6 +76,7 @@ address {
   padding: 0;
 
   white-space: nowrap;
+  -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -86,10 +87,17 @@ address {
 }
 
 .container {
-  width: 1158px;
+  max-width: 428px;
   padding-right: 15px;
   padding-left: 15px;
   margin: 0 auto;
+
+  @media (min-width: 768px) {
+    width: 768px;
+  }
+  @media (min-width: 1158px) {
+    width: 1158px;
+  }
 }
 
 /* My css */
@@ -106,6 +114,21 @@ address {
 
 .header__container {
   display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 16px 15px;
+}
+@media (min-width: 768px) {
+  .header-container {
+    padding: 0px 15px;
+  }
 }
 
 .header__navigation {
@@ -128,8 +151,12 @@ address {
 }
 
 .header__navigation-list {
-  display: flex;
-  gap: 40px;
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+    gap: 40px;
+  }
 }
 
 .header__navigation-link {
@@ -158,8 +185,11 @@ address {
 }
 
 .header__address-list {
-  display: flex;
-  gap: 40px;
+  display: none;
+  @media (min-width: 768px) {
+    display: flex;
+    gap: 40px;
+  }
 }
 
 .header__navigation-item {
