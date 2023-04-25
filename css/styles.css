@@ -835,6 +835,7 @@ address {
 /*#endregion --SECTION TEAM--*/
 
 /*#region --SECTION CUSTOMERS-- */
+
 .customers__title {
   font-weight: 700;
   font-size: 36px;
@@ -867,6 +868,7 @@ address {
     flex-wrap: nowrap;
   }
 }
+
 .customers__link {
   color: var(--border-company-color);
   border: 1px solid var(--border-company-color);
@@ -881,13 +883,14 @@ address {
   @media screen and (min-width: 768px) {
     padding: 16px 32px;
   }
-}
+} 
 .customers__link:hover,
 .customers__link:focus {
   color: var(--portfolio-button-bg-hover-color);
   border-color: var(--portfolio-button-bg-hover-color);
 }
-.customers__icon {
+
+.customer__icon {
   fill: currentColor;
   width: 110px;
   height: 56px;
@@ -895,8 +898,8 @@ address {
   @media screen and (min-width: 768px) {
     width: 104px;
     height: 56px;
-  }
-}
+  } 
+} 
 /*#endregion-- SECTION CUSTOMERS --*/
 
 /*#region --PORTFOLIO PAGE-- */
@@ -1241,3 +1244,4 @@ address {
     fill: var(--bg-color);
 }
 
+/*#endregion ----FOOTER SECTION--------*/
