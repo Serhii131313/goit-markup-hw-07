@@ -1340,10 +1340,7 @@ address {
   .menu-soc-list {
     display: flex;
     gap: 56px;
-    /* justify-content: center; */
-
     flex-direction: row;
-    /* justify-content: space-between; */
   }
 }
   .menu-soc-link {
