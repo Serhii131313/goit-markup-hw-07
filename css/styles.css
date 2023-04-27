@@ -83,6 +83,7 @@ address {
 }
 .section {
 	padding: 96px 0 96px 0;
+	
 	@media screen and (min-width: 1200px) {
 		padding: 120px 0 120px 0;
 	}
@@ -90,13 +91,14 @@ address {
 
 .container {
 	max-width: 428px;
-	padding-left: 16px;
-	padding-right: 16px;
+	padding-left: 15px;
+	padding-right: 15px;
 	margin-left: auto;
 	margin-right: auto;
 
 	@media screen and (min-width: 768px) {
 		max-width: 768px;
+		
 	}
 
 	@media screen and (min-width: 1200px) {
@@ -106,8 +108,9 @@ address {
 }
 
 .current {
-	color: var(--logo-color-top);
+	/* color: var(--logo-color-top); */
 	position: relative;
+	
 }
 
 .current::after {
@@ -118,8 +121,12 @@ address {
 	border-radius: 2px;
 	background-color: var(--logo-color-top);
 	position: absolute;
-	bottom: -4px;
+	bottom: -9px;
 }
+	@media screen and (min-width: 1200px) {
+	.current::after {bottom: -4px;
+		}
+	}
 
 /* My css */
 
@@ -180,7 +187,10 @@ address {
 }
 
 .header__address-item {
-	line-height: 1.17;
+	/* line-height: 1.17;*/
+	@media screen (min-width: 768px) {
+display:block;
+	}
 }
 
 .header__navigation-link {
@@ -191,6 +201,7 @@ address {
 	padding: 24px 0px;
 	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	position: relative;
+	
 }
 
 .header__navigation-links:hover,
@@ -204,18 +215,24 @@ address {
 
 	@media screen and (min-width: 768px) {
 		display: block;
-		margin-left: auto;
+		margin-left: 120px;
 	}
 }
 .header__address-list {
+	 display: flex;
+    flex-wrap: wrap;
+       
+	
+	@media screen and (min-width: 768px) {
+	
+		gap: 12px;
+	}
+
+		
 	@media screen and (min-width: 1200px) {
 		display: flex;
 		gap: 40px;
 	}
-}
-
-.header__address-item {
-	line-height: 1.25;
 }
 
 .header__adress-link {
@@ -224,6 +241,10 @@ address {
 	letter-spacing: 0.04em;
 	color: var(--seconari-text-color);
 	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	/* @media (min-width: 768px) {
+		gap: 12px;
+	} */
 
 	@media (min-width: 1200px) {
 		font-size: 16px;
@@ -361,12 +382,18 @@ address {
 }
 @media screen and (min-width: 768px) {
 	.privilage__list {
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
+		/* display: -webkit-box; */
+		/* display: -ms-flexbox; */
+		/* display: flex;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		gap: 72px 24px;
+		gap: 72px 24px; */
+	font-weight: 500;
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 72px 0px;
+
 	}
 }
 @media screen and (min-width: 1200px) {
@@ -384,7 +411,7 @@ address {
 @media screen and (min-width: 1200px) {
 	.privilage__list .privilage__title {
 		margin-top: 8px;
-		font-weight: 500;
+		font-weight: 400;
 		font-size: 20px;
 		line-height: 1.2;
 	}
@@ -449,7 +476,7 @@ address {
 .privilage__text {
 	font-size: 16px;
 	line-height: 1.5;
-	/* letter-spacing: 0.02em; */
+	letter-spacing: 0.02em;
 	color: var(--seconari-text-color);
 
 	@media screen and (max-width: 1200px) {
@@ -462,7 +489,10 @@ address {
 /*#region --SECTION WHAT-- */
 
 .what {
-	padding-bottom: 120px;
+	/* padding-bottom: 120px; */
+}
+.container .visually-hidden .work {
+    padding-bottom: 120px;
 }
 .section__what-title {
 	text-align: center;
@@ -597,16 +627,12 @@ address {
 	color: var(--color-text);
 	margin-bottom: 72px;
 }
+
 .customers__list {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
-	gap: 72px 16px;
-
-	@media screen and (min-width: 425px) {
-		justify-content: space-between;
-		gap: 72px 0;
-	}
+	justify-content: space-between;
+	gap: 72px 0px;
 
 	@media screen and (min-width: 768px) {
 		justify-content: center;
@@ -797,10 +823,8 @@ address {
 .footer {
 	background-color: var(--color-text);
 	padding: 96px 0;
+ 
 
-	@media screen and (min-width: 768px) {
-		padding: 96px 108px;
-	}
 
 	@media screen and (min-width: 1200px) {
 		padding: 100px 0;
@@ -810,11 +834,19 @@ address {
 	@media screen and (min-width: 768px) {
 		display: flex;
 		flex-wrap: wrap;
+		width: 582px;
+	}
+		@media screen and (min-width: 1200px) {
+	
+		width: 1158px;
 	}
 }
 .footer__flex {
+    margin-bottom: 72px;
+   
 	@media screen and (min-width: 768px) {
 		margin-right: 24px;
+		
 	}
 
 	@media screen and (min-width: 1200px) {
@@ -848,11 +880,14 @@ address {
 	line-height: 1.5;
 	letter-spacing: 0.02em;
 	width: 264px;
-	margin: 0 auto 72px auto;
-	text-align: center;
+	margin:auto;
+
+	text-align: left;
 
 	@media screen and (min-width: 768px) {
 		text-align: left;
+		
+		
 	}
 
 	@media screen and (min-width: 1200px) {
@@ -860,7 +895,6 @@ address {
 	}
 }
 .footer__social {
-	margin-bottom: 72px;
 
 	@media screen and (min-width: 1200px) {
 		margin-right: auto;
@@ -882,11 +916,15 @@ address {
 }
 
 .footer__social-list {
-	width: 208px;
-	display: flex;
+	/* width: 208px; */
+	/* display: flex;
 	justify-content: space-between;
-	margin: 0 auto;
-}
+	margin: 0 auto; */
+	display: flex;
+    justify-content: center;
+    gap: 16px;
+	margin-bottom: 72px;
+} 
 
 .footer__social-link {
 	display: flex;
@@ -1007,13 +1045,13 @@ address {
 }
 .modal {
 	padding-top: 72px;
-  padding: 72px 24px 24px 24px;
+    padding: 72px 24px 24px 24px;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 408px;
-	height: 584px;
+	width: 320px;
+	/* min-height: 584px; */
 	background-color: var(--modal-bg-color);
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
@@ -1052,6 +1090,7 @@ address {
 
 .order-form {
 	background-color: var(--modal-bg-color);
+	
 }
 
 .input {
@@ -1112,6 +1151,8 @@ address {
 }
 .order_title-accept {
 	font-size: 12px;
+	/* display: flex;
+	flex-wrap: wrap; */
 	line-height: 1.17;
 	letter-spacing: 0.04em;
 	color: var(--border-company-color);
@@ -1282,9 +1323,6 @@ address {
     line-height: 0;
     cursor: pointer;
   }
-  .mob-menu-list {
-    margin-bottom: 24px;
-  }
 
   .mob-menu-item:not(:last-child) {
     margin-bottom: 40px;
@@ -1334,9 +1372,9 @@ address {
   .menu-soc-list {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+	
   }
-  @media screen and (min-width: 447px) {
+  @media screen and (min-width: 428px) {
   .menu-soc-list {
     display: flex;
     gap: 56px;
